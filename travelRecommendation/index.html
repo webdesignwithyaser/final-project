@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Recommendations</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    
+    <nav>
+        <h1><a href="index.html"><i class="fa-solid fa-plane-up fa-rotate-90"></i>Global Travelers</a></h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li>
+          <input type="text" id="search" placeholder="Search for recommendations">
+          <button id="searchBtn">Search</button>
+          <button id="resetBtn">Clear</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div class="background-image">
+      <div class="headline">
+        <h1>Explore the World</h1>
+        <p>Discover the most beautiful destinations and embark on an unforgettable journey.</p>
+      </div>
+      <button class="btn-book-now">Book Now</button>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+    <div id="results"></div>
+  </main>
+
+  <script src="travel_recommendation.js"></script>
+</body>
+</html>
