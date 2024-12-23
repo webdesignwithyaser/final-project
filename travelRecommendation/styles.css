@@ -42,10 +42,7 @@ button {
   background-size: cover;
   height: 100vh;
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  
 }
 
 .social-links a, nav a {
@@ -61,4 +58,47 @@ nav a {
   margin: 0 5px;
   color: #fff;
   text-decoration: none;
+}
+.headline h1, .headline p{
+    color: black;
+}
+.background-image {
+    position: relative;
+    width: 100%;
+}
+
+.social-links {
+    float: left;
+    width: 10%; /* Adjust as needed */
+    text-align: center;
+    padding: 10px;
+}
+
+.social-links a {
+    display: block; /* Each link on a new line */
+    margin: 5px 0; /* Spacing between links */
+    text-decoration: none;
+    color: #333;
+}
+
+.headline {
+    float: left;
+    width: 20%; /* Adjust to fit beside the social links */
+    padding-top: 20%;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Clearfix to avoid collapsing parent due to floated elements */
+.background-image::after {
+    content: "";
+    clear: both;
 }
