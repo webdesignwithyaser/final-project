@@ -1,5 +1,5 @@
-let searchbtn = document.getElementById("search");
-let clearbtn = document.getElementById("restbtn");
+let searchbtn = document.getElementById("searchbtn");
+let clearbtn = document.getElementById("clearbtn");
 let result = document.getElementById("resultContainer");
 let mydiv = document.getElementById("dropdown");
 let close = document.getElementById("close-btn");
@@ -43,7 +43,7 @@ const searchError = () => {
   result.innerHTML = `<p class="notfound">Sorry we can't find your search</p>`;
 };
 
-fetch("travelrecommendation.json")
+fetch('travel_recommendation.json')
   .then((res) => res.json())
   .then((data) => {
     const search = () => {
