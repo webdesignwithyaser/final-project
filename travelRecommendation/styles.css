@@ -60,7 +60,7 @@ nav a {
   text-decoration: none;
 }
 .headline h1, .headline p{
-    color: black;
+    color: white;
 }
 .background-image {
     position: relative;
@@ -84,7 +84,7 @@ nav a {
 .headline {
     float: left;
     width: 20%; /* Adjust to fit beside the social links */
-    padding-top: 20%;
+    padding-top: 15%;
 }
 
 h1 {
@@ -101,4 +101,104 @@ p {
 .background-image::after {
     content: "";
     clear: both;
+}
+
+.headline h1{
+    font-size: 270%;
+}
+
+html[data-page="about"] .headline {
+    float: left;
+    width: 75%; /* Adjust to fit beside the social links */
+    padding-top: 2%;
+}
+
+html[data-page="about"] #headlinePara {
+    background-color: #333;
+    color: #fff;
+}
+
+html[data-page="about"] h2 {
+    font-size: 250%;
+}
+
+html[data-page="about"] h3 {
+    font-size: 230%;
+    float: left;
+    width: 5%;
+    margin-right: 7%;
+}
+
+html[data-page="about"]  #team{
+    padding-top: 5%;
+}
+html[data-page="about"] .teamMem {
+    float: left;
+    font-size: 75%;
+    margin: 0 4%;
+    width: 20%;
+    background-color: #333;
+    color: #fff;
+}
+html[data-page="about"] .teamMem p {
+    color: #fff;
+}
+
+html[data-page="about"]  .teamMemPara{
+   padding-left: 20px;
+}
+html[data-page="about"]  .role{
+   margin-left: 20px;
+   margin-right: 20px;
+   background-color: blue;
+   border: 1px solid white;
+   border-radius: 10px;
+}
+
+html[data-page="contact"] h2 {
+    font-size: 250%;
+    float: left;
+    width: 40%;
+    margin-right: 7%;
+    padding-top: 10%;
+}
+
+html[data-page="contact"] .contact-form {
+    float: left;
+    font-size: 75%;
+    margin: 0 2%;
+    width: 45%;
+    background-color: #333;
+    color: #fff;
+}
+
+html[data-page="contact"] .headline {
+    float: left;
+    width: 75%; /* Adjust to fit beside the social links */
+    padding-top: 2%;
+}
+
+html[data-page="contact"]  label, input{
+    display: block;
+}
+
+html[data-page="contact"]  input, button, textarea{
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+html[data-page="contact"]  button{
+    background: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
 }
