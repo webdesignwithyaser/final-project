@@ -13,9 +13,9 @@ const clearsearch = () => {
 
 clearbtn.addEventListener("click", clearsearch);
 
-const showResult = (name, img, info) => {
-  if (mydiv.style.display === "none" || mydiv.style.display === "") {
-    mydiv.style.display = "block";
+const showResult = (name, img, info, j=-1) => {
+  if (mydiv.style.display === "none" || mydiv.style.display === "" || j!=-1) {
+    mydiv.style.display = "inline-block";
   } else {
     mydiv.style.display = "none";
   }
@@ -64,12 +64,26 @@ fetch('travel_recommendation.json')
           showResult(temple.name, temple.imageUrl, temple.description);
           notfound = false;
         }
+        if (searchQuery=="temple" || searchQuery=="temples"){
+            for(let i=1; i<3;i++){
+                showResult(temple.name, temple.imageUrl, temple.description,i);
+                console.log(temple.name, temple.imageUrl, temple.description)
+                notfound = false;
+            }
+        }
       });
 
       data.beaches.map((beach) => {
         if (beach.name.toLowerCase().includes(searchQuery)) {
           showResult(beach.name, beach.imageUrl, beach.description);
           notfound = false;
+        }
+        if (searchQuery=="beach" || searchQuery=="beaches"){
+            for(let i=1; i<3;i++){
+                showResult(beach.name, beach.imageUrl, beach.description,i);
+                console.log(beach.name, beach.imageUrl, beach.description)
+                notfound = false;
+            }
         }
       });
 
